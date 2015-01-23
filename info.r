@@ -1,0 +1,5 @@
+name = "Yang Jiang"
+SID = "25323763"
+email = "yjiang3@berkeley.edu"
+github_name = "yzjiangyang"
+status = "enrolled"
