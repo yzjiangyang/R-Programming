@@ -219,12 +219,10 @@ qplot(pop,y=GDP_per_person,data=SO2012Ctry,log="xy")+geom_point(aes(size = Total
 install.packages("ggplot2")
 library("ggplot2")
 # Your ggplot command:
-top5<-order(SO2012Ctry$Total, decreasing = TRUE)[1:5]
-p<-qplot(x=pop,y=GDP_per_person,data=SO2012Ctry,log="xy")+geom_point(aes(size = Total))
-q<-p+labs(x="log of population",y="log of GDP per person")+ggtitle("Population vs GDP per person")
-w<-qplot(x=pop,y=GDP_per_person,data=SO2012Ctry,log="xy",label="ISO",geom="text",c(top5))
-print(w)
-
+top5 <- SO2012Ctry[order(SO2012Ctry$Total, decreasing=TRUE),][1:5,]
+ggplot(SO2012Ctry, aes(x=pop, y=GDP_per_person))+
+  geom_point(aes(size =Total),color="blue")+scale_y_log10()+scale_x_log10()+
+  annotate("text",x=top5$pop, y=top5$GDP_per_person,label=top5$Country)
 ######################################
 # PLOT 3.
 # Plotting points on maps can help us see geographic relationships
@@ -305,17 +303,17 @@ load("rainfallCO.rda")
 
 # Create a variable 
 # max.rain : a vector of length 5 with the maximum rainfall at each station
-max.rain<-lapply(rain,max)
+max.rain<-sapply(rain,max)
 print(max.rain)
 # Create a variable 
 # mean.rain : a vector of length 5 with the average rainfall at each station
-mean.rain<-lapply(rain,mean)
+mean.rain<-sapply(rain,mean)
 print(mean.rain)
 # Create a variable 
 # sd.rain : a vector of length 5 with the standard deviation of the rainfall at each station
-sd.rain<-lapply(rain,sd)
+sd.rain<-sapply(rain,sd)
 print(sd.rain)
 # Create a variable 
 # n1989.rain : a vector of length 5 with the number of measurements at each station in the year 1989 (use [day])
-n1989.rain<-lapply(day,length)
+n1989.rain<-sapply(day,length)
 print(n1989.rain)
