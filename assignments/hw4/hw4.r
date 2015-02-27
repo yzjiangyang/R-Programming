@@ -75,14 +75,13 @@ if (any (colnames(recipe)!=c("amount","unit","ingredient"))) {stop("Error:Invali
 recipe.metric<-recipe
 locateCUP<-grep("cup",recipe.metric[,"unit"])
 locateOZ<-grep("oz",recipe.metric[,"unit"])
-recipe.metric[,"unit"]<-gsub("cup","ml",recipe.metric[,"unit"])
 recipe.metric[,"unit"]<-gsub("cups","ml",recipe.metric[,"unit"])
+recipe.metric[,"unit"]<-gsub("cup","ml",recipe.metric[,"unit"])
 recipe.metric[,"unit"]<-gsub("oz","gr",recipe.metric[,"unit"])
 recipe.metric[,"amount"][locateCUP]<-round(recipe.metric[,"amount"][locateCUP]*236.6/5)*5
 recipe.metric[,"amount"][locateOZ]<-round(recipe.metric[,"amount"][locateOZ]*28.3/5)*5
 return(recipe.metric)
 }
-
 
 #### Function #4a
 # Implement the function "bootstrapVarEst"
