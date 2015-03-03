@@ -1,0 +1,23 @@
+{
+    "email": "yjiang3@berkeley.edu", 
+    "github_name": "yzjiangyang", 
+    "grades": {
+        "hw1": {
+            "note": "", 
+            "hash": "d79481f6f92f9aa194a2d332cb25b2b8d8ff3139", 
+            "earned": 20, 
+            "possible": 20, 
+            "penalty": 0, 
+            "parts": {
+                "hw1": {
+                    "possible": 20, 
+                    "earned": 20
+                }
+            }
+        }
+    }, 
+    "login": "yzjiangyang", 
+    "name": "Yang Jiang", 
+    "status": "enrolled", 
+    "url": "git@github.com:yzjiangyang/stat133.git"
+}
