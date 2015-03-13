@@ -19,5 +19,6 @@
     "login": "yzjiangyang", 
     "name": "Yang Jiang", 
     "status": "enrolled", 
-    "url": "git@github.com:yzjiangyang/stat133.git"
+    "url": "git@github.com:yzjiangyang/stat133.git", 
+    "section": "lab3"
 }
