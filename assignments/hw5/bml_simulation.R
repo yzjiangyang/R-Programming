@@ -188,6 +188,9 @@ bml.sim(5,5,0.9) # compare with bml.sim(15,15,0.9), the free flowing traffic is 
 #[[3]]
 #[1] 10000
 
+#### We can visualize the initial and gridlocked traffic systems by function "image()". For initial
+#### traffic system, image(t(m)[,nrow(m):1], col = c("white", "red", "blue")), for gridlocked traffic
+#### system, image(t(grid.new)[,nrow(grid.new):1],col = c("white", "red", "blue"))
 
 ######## CONCLUSIONS.
 # In general, the higher the density(p) is, the more frequent the traffic jams are.
