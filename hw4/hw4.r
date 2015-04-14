@@ -1,4 +1,4 @@
-`# HW 4
+# HW 4
 # Writing functions
 # Due Thursday February 26th by midnight 
 # This .r file should contain your code
