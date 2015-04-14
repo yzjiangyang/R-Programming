@@ -156,8 +156,8 @@ se<-gsub("[[:digit:]]","",tolower(se))
 
 
   # Drop the words (Applause. and Laughter.)
-se<-gsub("\\[Applause\\]","",se)
-se<-gsub("\\[Laughter\\]","",se)
+se<-gsub("\\[applause\\]","",se)
+se<-gsub("\\[laughter\\]","",se)
 
   
   # Split the text up by blanks and punctuation  (hint: strsplit, unlist)
