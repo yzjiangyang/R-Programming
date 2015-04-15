@@ -247,7 +247,7 @@ chars <- sapply(speechWords,function(x) sum(nchar(x)))
 sentences <- sapply(speechesL,length)
 
 # Update the data frame
-speechesDF <- data.frame(speechesDF,yr=speechYr,month=speechMo,sentences, words, chars)
+speechesDF <- data.frame(speechesDF,"yr"=speechYr,"month"=speechMo,"sent"=sentences, "words"=words, "chars"=chars)
 
 ######################################################################
 ## Create a matrix [presidentWordMat] 
@@ -324,7 +324,8 @@ cols <- rainbow(length(unique(speechesDF$party)))
 # col = cols[presParty[rownames(presDist)]]
   
 plot(mds, type = "n", xlab = "", ylab = "", main="Presidents")
-text(mds, rownames(presDist), col = cols[presParty[rownames(presDist)]])
+
+text(mds, labels = unique(speechesDF$initial),col = cols[presParty[names(presParty)]])
 
 
 ### Use hierarchical clustering to produce a visualization of  the results.
@@ -341,11 +342,11 @@ plot(hc)
 # x-axis: speech year, y-axis: average sentence length (word/sent)
 
 # your plot statements below:
-plot(speechesDF$year, speechesDF$sent, xlab="year", ylab="# of sentences")
-plot(speechesDF$year, speechesDF$word, xlab="year", ylab="# of words")
-plot(speechesDF$year, speechesDF$char, xlab="year", ylab="# of characters")
-plot(speechesDF$year, speechesDF$char/speechesDF$word, xlab="year", ylab="average word length")
-plot(speechesDF$year, speechesDF$word/speechesDF$sent, xlab="year", ylab="average sentence length")
+plot(speechesDF$yr, speechesDF$sent, xlab="year", ylab="# of sentences")
+plot(speechesDF$yr, speechesDF$words, xlab="year", ylab="# of words")
+plot(speechesDF$yr, speechesDF$chars, xlab="year", ylab="# of characters")
+plot(speechesDF$yr, speechesDF$chars/speechesDF$words, xlab="year", ylab="average word length")
+plot(speechesDF$yr, speechesDF$words/speechesDF$sent, xlab="year", ylab="average sentence length")
 
 
 
