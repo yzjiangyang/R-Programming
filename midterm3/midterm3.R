@@ -8,7 +8,11 @@
 # and return the following
 #   <num.star>: an integer indicating how many elements of <chvec> contain the "*"
 #     symbol. For example: numStarElements(c('star', 'st*r', '***')) should return 2
-
+numStarElements<-function(chvec){
+  chvec1<-grep("\\*",chvec)
+  num.star<-length(chvec1)
+  return (num.star)
+}
 
 
 # Write a function called numDigits that counts the number of (single) digits in
@@ -22,7 +26,12 @@
 # Some test cases:
 # all.equal(numDigits("1z3p ! 21"), 4)
 # all.equal(numDigits("abcdefg"), 0)
-
+numDigits<-function(chvec){
+  chvec_new<-unlist(strsplit(chvec,""))
+  index<-grep("[[:digit:]]",chvec_new)
+  total<-length(as.numeric(chvec_new[index]))
+  return(total)
+}
 
 
 # Write a function called hisToTheir that converts every instance of him
@@ -34,6 +43,12 @@
 #
 # and return
 #   <theirchvec>: The same character vector with the required substitutions.
+hisToTheir<-function(chvec){
+  chvec2<-gsub("\\<him\\>","them",chvec)
+  chvec3<-gsub("\\<he\\>","they",chvec2)
+  theirchvec<-gsub("\\<his\\>","their",chvec3)
+  return(theirchvec)
+}
 
 #A test case
 all.equal(
@@ -55,3 +70,13 @@ all.equal(
 #  <letter> The most common letter or letters in the string.
 # For example mostCommonLetter("aabbccccdddd") should return 
 # [1] "c" "d"
+mostCommonLetter<-function(chvec){
+  chvec4<-tolower(chvec)
+  chvec5<-unlist(strsplit(chvec,""))
+  Locate<-grep("[[:alpha:]]",chvec5)
+  mat<-as.matrix(table(chvec5[Locate]))
+  ma<-which(mat[,1]==max(mat[,1]))
+  letter<-names(ma)
+  return(letter)
+} 
+
