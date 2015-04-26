@@ -1,0 +1,4 @@
+wrong plots output  -2
+line 105: true curve should always be quadratic  -1
+
+Score: 17/20
