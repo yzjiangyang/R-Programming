@@ -1,0 +1,38 @@
+Total: 16/20
+
+Plot 1
+Are the basics of the plot present? 1/1
+Are there x axis and y axis labels? 1/1
+Is there an extension of line? 0/1
+##!! You need geom_step not geom_line for a step function.
+Are there two vertical lines? 1/1
+Are the vertical lines green and the runner names blue? 1/1
+
+Plot 2
+Are there labels on the plot? 1/1
+Are there circles on the plot? 1/1
+Are there five labelled circles? 1/1
+Does the plot look good? 1/1
+
+Plot 3
+Are there circles with area proportional to medal count? 0/1
+##!! You have circles with radius not area proportional to total medals
+##!! Look at scale_size_area() or set aes(size = sqrt(S02012Ctry$Total))
+Are the circles gold? 1/1
+Does the plot look good? 0/1
+##!! You should try to plot the points and the map together, not separately.
+
+Plot 4
+Are the bars placed appropriately? 1/1
+Are the x-axis labels rotated? 1/1
+Does the plot look good? 1/1
+
+Apply results
+Is max.rain correct? 1/1
+Is mean.rain correct? 1/1
+Is sd.rain correct? 1/1
+Is n1989.rain correct? 0/2
+##!! For n1989.rain you give the total number of measurements at each station,
+##!! not the total number just in 1989 at each station
+
+
