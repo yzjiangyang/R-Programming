@@ -1,0 +1,20 @@
+Total: 17/20
+
+Is n.speeches correct? 2/2
+Are presidents and tempDates correct? 2/2
+Are speechYr and speechMo correct? 2/2
+
+Is speechToWords reasonable? 1/2
+##!! speechToWords returns NA
+##!! speechToWords(speechesL[[1]])
+Are wordVecs and wordMat reasonable? 1/2
+##!! There are too few words in wordMat
+Is presidentWordMat reasonable? 1/2
+##!! The counts are too low in this matrix.
+##!! Are you sure you included all speeches?
+
+Plots
+Are the multi-dimensional scaling plots correct? 2/2
+Is the hierarchical clustering plot appropriate? 1/1
+Are the five plots showing speech year and sentences/words/characters/word length/sentence length well done? 5/5
+
