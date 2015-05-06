@@ -1,0 +1,4 @@
+t: wrong table  -2
+mean.long.cache  -3
+
+Score: 28/33
