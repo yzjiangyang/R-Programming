@@ -7,11 +7,11 @@ INFO:root:Executed R('powers.r <- powers(seq(1, 3, by = 1), 3)')
 INFO:root:(3 points) R('all.equal(powers.r, sol$powers, check.attributes=F)')[0] is True
 INFO:root:(1 points) R('all.equal(length(powers.r), length(sol$powers), check.attributes=F)')[0] is True
 INFO:root:Executed R('recipe.r <- recipeConversion(test$recipe)')
-INFO:root:(3 points) R('all.equal(recipe.r, sol$recipe, check.attributes=F, tolerance=1e-1)')[0] is True
+INFO:root:(3 points) R('all.equal(recipe.r, sol$recipe, check.attributes=F, tolerance=1e1)')[0] is True
 INFO:root:Executed R('bootstrapVarEst.r <- bootstrapVarEst(test$bootstrapVarEst.x, test$bootstrapVarEst.B)')
 ERROR:root:Got exception on main handler
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -24,7 +24,7 @@ RRuntimeError: Error in sample.int(length(x), size, replace, prob) :
   object 'n' not found
 
 ERROR:root:Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -37,7 +37,7 @@ RRuntimeError: Error in sample.int(length(x), size, replace, prob) :
   object 'n' not found
 
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -54,7 +54,7 @@ ERROR:root:... Expecting: True
 ERROR:root:... But got:   Traceback error
 ERROR:root:Got exception:
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -67,7 +67,7 @@ RRuntimeError: Error in all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.
   object 'bootstrapVarEst.r' not found
 
 ERROR:root:Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -80,7 +80,7 @@ RRuntimeError: Error in all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.
   object 'bootstrapVarEst.r' not found
 
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -95,7 +95,7 @@ RRuntimeError: Error in all.equal(bootstrapVarEst.r, sol$bootstrapVarEst, check.
 INFO:root:Executed R('jackknifeVarEst.r <- jackknifeVarEst(test$jackknifeVarEst.x)')
 ERROR:root:Got exception on main handler
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -107,7 +107,7 @@ Traceback (most recent call last):
 RRuntimeError: Error in jackknifeVarEst(test$jackknifeVarEst.x) : object 'n' not found
 
 ERROR:root:Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -119,7 +119,7 @@ ERROR:root:Traceback (most recent call last):
 RRuntimeError: Error in jackknifeVarEst(test$jackknifeVarEst.x) : object 'n' not found
 
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -130,12 +130,12 @@ Traceback (most recent call last):
     res = super(Function, self).__call__(*new_args, **new_kwargs)
 RRuntimeError: Error in jackknifeVarEst(test$jackknifeVarEst.x) : object 'n' not found
 
-ERROR:root:(3 points) Checking R('all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.attributes=F, tolerance=1e-1)')[0]
+ERROR:root:(3 points) Checking R('all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.attributes=F, tolerance=1)')[0]
 ERROR:root:... Expecting: True
 ERROR:root:... But got:   Traceback error
 ERROR:root:Got exception:
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -148,7 +148,7 @@ RRuntimeError: Error in all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.
   object 'jackknifeVarEst.r' not found
 
 ERROR:root:Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -161,7 +161,7 @@ RRuntimeError: Error in all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.
   object 'jackknifeVarEst.r' not found
 
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -176,7 +176,7 @@ RRuntimeError: Error in all.equal(jackknifeVarEst.r, sol$jackknifeVarEst, check.
 INFO:root:Executed R('samplingVarEst.r <- samplingVarEst(test$samplingVarEst.x, test$samplingVarEst.type)')
 ERROR:root:Got exception on main handler
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -188,7 +188,7 @@ Traceback (most recent call last):
 RRuntimeError: Error in jackknifeVarEst(x) : object 'n' not found
 
 ERROR:root:Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -200,7 +200,7 @@ ERROR:root:Traceback (most recent call last):
 RRuntimeError: Error in jackknifeVarEst(x) : object 'n' not found
 
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 164, in run
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 164, in run
     exec(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -211,12 +211,12 @@ Traceback (most recent call last):
     res = super(Function, self).__call__(*new_args, **new_kwargs)
 RRuntimeError: Error in jackknifeVarEst(x) : object 'n' not found
 
-ERROR:root:(3 points) Checking R('all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes=F, tolerance=1e-1)')[0]
+ERROR:root:(3 points) Checking R('all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes=F, tolerance=1)')[0]
 ERROR:root:... Expecting: True
 ERROR:root:... But got:   Traceback error
 ERROR:root:Got exception:
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -229,7 +229,7 @@ RRuntimeError: Error in all.equal(samplingVarEst.r, sol$samplingVarEst, check.at
   object 'samplingVarEst.r' not found
 
 ERROR:root:Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -242,7 +242,7 @@ RRuntimeError: Error in all.equal(samplingVarEst.r, sol$samplingVarEst, check.at
   object 'samplingVarEst.r' not found
 
 Traceback (most recent call last):
-  File "/Users/andyatcal/Library/Python/2.7/lib/python/site-packages/gradebook/score.py", line 180, in check
+  File "/Library/Python/2.7/site-packages/gradebook/score.py", line 180, in check
     result = eval(command, g)
   File "<string>", line 1, in <module>
   File "/Library/Python/2.7/site-packages/rpy2/robjects/__init__.py", line 269, in __call__
@@ -254,4 +254,4 @@ Traceback (most recent call last):
 RRuntimeError: Error in all.equal(samplingVarEst.r, sol$samplingVarEst, check.attributes = F,  : 
   object 'samplingVarEst.r' not found
 
-INFO:root:You got a 11 out of 20.
+INFO:root:You got a 19 out of 20.
