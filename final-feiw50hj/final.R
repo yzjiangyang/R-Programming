@@ -232,7 +232,7 @@ max.diff.rain<-c()
 max.diff.rain[1]<-max(abs(diff(rain[[1]])))
 max.diff.rain[2]<-max(abs(diff(rain[[2]])))
 max.diff.rain[3]<-max(abs(diff(rain[[3]])))
-max.diff.rain[4]<-max(abs(diff(rain[[4])))
+#max.diff.rain[4]<-max(abs(diff(rain[[4])))
 max.diff.rain[5]<-max(abs(diff(rain[[5]])))
 # [5 pts]
 # Create [prop.rain], a vector of length 5 where each entry is the 
@@ -250,7 +250,7 @@ prob.rain[5]<-sum(rain[[5]]>0)
 # in a separate panel (there will be one empty panel)
 # use an apply statment to the the plotting
 par(mfrow=c(2,3))
-hist(lapply(rain))
+#hist(lapply(rain))
 
 #################################################################
 ##### PART IV : functions [20 pts]
@@ -320,7 +320,7 @@ if(cols==TRUE){
 PermDiff <- function(cases, controls, k=5000){
 for(i in 1:k){
   cases<-sample(j,c(cases,controls),replace=F)
-  controls<-  
+#  controls<-  
 }
 return(mean(cases)-mean(controls))
 }
@@ -359,7 +359,7 @@ set.seed(123456)
 #function <- NumJackpot(k, B){
 #  <your code here>
 #}
-NumJackpot(k, B){
+NumJackpot<-function(k, B){#andy
  i=0 
  c=0
  player<-c()
@@ -371,15 +371,15 @@ for (i in 1:B){
   }
   c<-c+1
 } 
-truth[i]<-sum(winner==player)
+#truth[i]<-sum(winner==player) #winner is not defined, andy
 i<-i+1
 }
 # For B = 5000 and each value of k = 10000, 50000, 100000, 500000
 # Plot a histogram of the output from NumJackpot (i.e. four histograms)
-hist(NumJackpot(10000,5000))
-hist(NumJackpot(50000,5000))
-hist(NumJackpot(100000,5000))
-hist(NumJackpot(500000,5000))
+hist(NumJackpot(100,50)) #andy
+hist(NumJackpot(500,50))
+hist(NumJackpot(1000,50))
+hist(NumJackpot(5000,50))
 
 
 #################################################################
